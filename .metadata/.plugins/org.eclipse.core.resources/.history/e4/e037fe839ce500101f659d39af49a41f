@@ -1,0 +1,607 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <stdio.h>
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+typedef struct{
+	void (*taskFunction)(void);
+	uint16_t period;
+	uint32_t nextExec;
+	uint8_t functionEnabled;
+}tasks_struct;
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+#define TASK_COUNT 5
+#define MPU_ADDRESS 0x68<<1
+#define MPU_REG_ADDRESS 0x3B
+#define BMP_ADDRESS 0x76<<1
+#define BMP_CALIB_REG_ADDRESS 0x88
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+I2C_HandleTypeDef hi2c2;
+
+UART_HandleTypeDef huart1;
+
+/* USER CODE BEGIN PV */
+uint32_t now;
+int32_t t_fine;
+
+static volatile uint8_t i2c_busy = 0;
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_USART1_UART_Init(void);
+static void MX_I2C2_Init(void);
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+UART_buffer buf1={0};	//buf1 is a UART_Buffer structure defined in main.h file. Same for all structures below.
+mpu_raw_result_struct mpu_raw={0};
+mpu_scaled_result_struct mpu_scaled={0};
+bmp_calib_struct bmp_calib_data={0};
+bmp_raw_struct bmp_raw={0};
+bmp_scaled_struct bmp_scaled={0};
+
+void USART1_IRQHandler(){
+	if(huart1.Instance->SR & USART_SR_TXE){
+		if(buf1.tail!=buf1.head){
+			huart1.Instance->DR=buf1.charBuffer[buf1.tail];
+			buf1.tail=(buf1.tail+1)%UART_BUFFER_SIZE;
+		}
+		else{
+			__HAL_UART_DISABLE_IT(&huart1, UART_IT_TXE);
+		}
+	}
+}
+
+int _write(int fd, char *ptr, int len) {
+	  //This is blocking
+//    HAL_StatusTypeDef hstatus;
+//
+//    if (fd == 1 || fd == 2) {
+//      hstatus = HAL_UART_Transmit(&huart1, (uint8_t *) ptr, len, HAL_MAX_DELAY);
+//      if (hstatus == HAL_OK)
+//        return len;
+//      else
+//        return -1;
+//    }
+//    return -1;
+
+	//This is non blocking
+
+	if(fd!=1 && fd!=2) return -1;
+
+	for(int i=0;i<len;i++){
+		uint16_t next=(buf1.head+1)%UART_BUFFER_SIZE;
+
+		if(next==buf1.tail) return -1;
+
+		buf1.charBuffer[buf1.head]=ptr[i];
+		buf1.head=next;
+	}
+
+	__HAL_UART_ENABLE_IT(&huart1, UART_IT_TXE);
+
+	return len;
+}
+
+void mpu_init(){
+	uint8_t initData = 0x00;
+	HAL_StatusTypeDef ret;
+
+	ret=HAL_I2C_Mem_Write(&hi2c2, MPU_ADDRESS, 0x6B, I2C_MEMADD_SIZE_8BIT, &initData, 1, 10);
+
+	printf("MPU initialization status: %d\r\n", ret);
+}
+
+void mpu_read(mpu_raw_result_struct *mpu){
+	uint8_t rawValues[14]={0};
+
+	HAL_I2C_Mem_Read(&hi2c2, MPU_ADDRESS, MPU_REG_ADDRESS, I2C_MEMADD_SIZE_8BIT, rawValues, 14, 10);
+
+	mpu->accel[0]= (rawValues[0]<<8) | rawValues[1];
+	mpu->accel[1]= (rawValues[2]<<8) | rawValues[3];
+	mpu->accel[2]= (rawValues[4]<<8) | rawValues[5];
+
+	mpu->temperature= (rawValues[6]<<8) | rawValues[7];
+
+	mpu->gyro[0]= (rawValues[8]<<8) | rawValues[9];
+	mpu->gyro[1]= (rawValues[10]<<8) | rawValues[11];
+	mpu->gyro[2]= (rawValues[12]<<8) | rawValues[13];
+}
+
+void mpu_scaling(mpu_raw_result_struct *raw, mpu_scaled_result_struct *scaled){
+
+	scaled->accel[0] = raw->accel[0] / 16384.0f;
+	scaled->accel[1] = raw->accel[1] / 16384.0f;
+	scaled->accel[2] = raw->accel[2] / 16384.0f;
+
+	scaled->temperature = (raw->temperature / 340.0f) + 36.53f;
+
+	scaled->gyro[0] = raw->gyro[0] / 131.0f;
+	scaled->gyro[1] = raw->gyro[1] / 131.0f;
+	scaled->gyro[2] = raw->gyro[2] / 131.0f;
+}
+
+void bmp_init(){
+	uint8_t reset = 0xB6;
+	    HAL_I2C_Mem_Write(&hi2c2, BMP_ADDRESS, 0xE0, I2C_MEMADD_SIZE_8BIT, &reset, 1, 100); //Soft reset
+
+	    HAL_Delay(5);
+
+	    uint8_t config = 0x20;
+	    HAL_I2C_Mem_Write(&hi2c2, BMP_ADDRESS, 0xF5, I2C_MEMADD_SIZE_8BIT, &config, 1, 100); //standby time setup, IIR filter off, SPI disabled.
+
+
+	    uint8_t ctrl_meas = 0x27;
+	    HAL_I2C_Mem_Write(&hi2c2, BMP_ADDRESS, 0xF4, I2C_MEMADD_SIZE_8BIT, &ctrl_meas, 1, 100); //Minimal over-sampling and normal mode.
+}
+
+void bmp_read_calib_data(bmp_calib_struct *bmp){
+	    uint8_t rawValues[24];
+
+	    uint8_t status;
+	    uint32_t timeout = uwTick + 20;
+
+	    do {
+	        HAL_I2C_Mem_Read(&hi2c2, BMP_ADDRESS, 0xF3, I2C_MEMADD_SIZE_8BIT, &status, 1, 100);
+	    } while ((status & 0x01) && uwTick < timeout);
+
+	    HAL_I2C_Mem_Read(&hi2c2, BMP_ADDRESS, 0x88, I2C_MEMADD_SIZE_8BIT, rawValues, 24, 100);
+
+	    bmp->dig_T1 = (rawValues[1] << 8) | rawValues[0];
+	    bmp->dig_T2 = (rawValues[3] << 8) | rawValues[2];
+	    bmp->dig_T3 = (rawValues[5] << 8) | rawValues[4];
+	    bmp->dig_P1 = (rawValues[7] << 8) | rawValues[6];
+	    bmp->dig_P2 = (rawValues[9] << 8) | rawValues[8];
+	    bmp->dig_P3 = (rawValues[11]<<8) | rawValues[10];
+	    bmp->dig_P4 = (rawValues[13]<<8) | rawValues[12];
+	    bmp->dig_P5 = (rawValues[15]<<8) | rawValues[14];
+	    bmp->dig_P6 = (rawValues[17]<<8) | rawValues[16];
+	    bmp->dig_P7 = (rawValues[19]<<8) | rawValues[18];
+	    bmp->dig_P8 = (rawValues[21]<<8) | rawValues[20];
+	    bmp->dig_P9 = (rawValues[23]<<8) | rawValues[22];
+}
+
+void bmp_raw_read(bmp_raw_struct *bmp){
+	HAL_Delay(5);	//Breathing room for BMP after MPU read
+
+	uint8_t rawValues[6];
+
+//	uint8_t status;
+//
+//	do{
+//		HAL_I2C_Mem_Read(&hi2c2, BMP_ADDRESS, 0xF3, I2C_MEMADD_SIZE_8BIT, &status, 1, 100);
+//	}while(status & 0x08);
+
+	HAL_I2C_Mem_Read(&hi2c2, BMP_ADDRESS, 0xF7, I2C_MEMADD_SIZE_8BIT, rawValues, 6, 100);
+
+	bmp->raw_pressure=(rawValues[0]<<12) | (rawValues[1]<<4) | (rawValues[2]>>4);
+	bmp->raw_temp=(rawValues[3]<<12) | (rawValues[4]<<4) | (rawValues[5]>>4);
+}
+
+void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled)
+{
+    // Temperature compensation
+    int32_t Var1, Var2;
+
+    Var1 = ((((bmpRaw->raw_temp >> 3) - ((int32_t)bmpCalib->dig_T1 << 1)) *
+             (int32_t)bmpCalib->dig_T2) >> 11);
+
+    Var2 = (((((bmpRaw->raw_temp >> 4) - ((int32_t)bmpCalib->dig_T1)) *
+              ((bmpRaw->raw_temp >> 4) - ((int32_t)bmpCalib->dig_T1))) >> 12) *
+            (int32_t)bmpCalib->dig_T3) >> 14;
+
+    t_fine = Var1 + Var2;
+    bmpScaled->scaled_temp = (t_fine * 5 + 128) >> 8;
+
+    // Pressure compensation
+    int64_t var1, var2, p;
+
+    var1 = (int64_t)((t_fine - 128000) >> 0);
+    var2 = var1 * var1 * (int64_t)bmpCalib->dig_P6;
+    var2 = var2 + ((var1 * (int64_t)bmpCalib->dig_P5) << 17);
+    var2 = var2 + ((int64_t)bmpCalib->dig_P4 << 35);
+
+    var1 = ((var1 * var1 * (int64_t)bmpCalib->dig_P3) >> 8) +
+           ((var1 * (int64_t)bmpCalib->dig_P2) << 12);
+    var1 = (((((int64_t)1) << 47) + var1)) * ((int64_t)bmpCalib->dig_P1) >> 33;
+
+    if (var1 == 0) {
+        bmpScaled->scaled_pressure = 0;
+        return;
+    }
+
+    p = 1048576LL - bmpRaw->raw_pressure;
+    p = (((p << 31) - var2) * 3125LL) / var1;
+
+    var1 = (((int64_t)bmpCalib->dig_P9) * (p >> 13) * (p >> 13)) >> 25;
+    var2 = (((int64_t)bmpCalib->dig_P8) * p) >> 19;
+
+    p = ((p + var1 + var2) >> 8) + (((int64_t)bmpCalib->dig_P7) << 4);
+    bmpScaled->scaled_pressure = (uint32_t)p>>8;
+}
+
+void toggle(){
+	static uint8_t ledState=0;
+
+	if(ledState)
+		GPIOC->BSRR=(1<<13);
+	else
+		GPIOC->BSRR=(1<<(13+16));
+
+	ledState^=1;
+}
+
+void displayCurrentState(mpu_scaled_result_struct *mpu, bmp_raw_struct *bmp_raw, bmp_scaled_struct *bmp_scaled){
+	printf("Current time:%lu ms\r\n", uwTick);
+
+	printf("ACC: %.3f %.3f %.3f, GYRO: %.2f %.2f %.2f, TEMP: %.2f\r\n",
+			mpu->accel[0], mpu->accel[1], mpu->accel[2], mpu->gyro[0], mpu->gyro[1], mpu->gyro[2], mpu->temperature);
+
+
+    printf("Raw pressure: %lu, Raw temperature: %lu\r\n", bmp_raw->raw_pressure, bmp_raw->raw_temp);
+    printf("Pressure: %lu, Temperature: %ld\r\n", bmp_scaled->scaled_pressure, bmp_scaled->scaled_temp);
+}
+
+void I2C_Lock(void)
+{
+    while (i2c_busy);   // wait until free
+    i2c_busy = 1;
+}
+
+void I2C_Unlock(void)
+{
+    i2c_busy = 0;
+}
+
+
+void call_mpu(){
+	I2C_Lock();
+	mpu_read(&mpu_raw);
+	I2C_Unlock();
+
+	mpu_scaling(&mpu_raw, &mpu_scaled);
+}
+
+void call_bmp_raw(){
+	I2C_Lock();
+	bmp_raw_read(&bmp_raw);
+	I2C_Unlock();
+}
+
+void call_bmp_scaling(){
+	  bmp_scaling(&bmp_calib_data, &bmp_raw, &bmp_scaled);
+}
+
+void call_displayCurrentState(){
+	displayCurrentState(&mpu_scaled, &bmp_raw, &bmp_scaled);
+}
+
+void call_toggle(){
+	toggle();
+}
+
+tasks_struct tasks[]={
+		{call_mpu, 50, 50, 1},
+		{call_bmp_raw, 200, 200, 1},
+		{call_bmp_scaling, 1000, 900, 1},
+		{call_displayCurrentState, 500, 500, 1},
+		{call_toggle, 1000, 1000, 1}
+};
+
+void cooperativeScheduler(){
+	now=uwTick;
+
+	for(int i=0;i<TASK_COUNT;i++){
+		if(tasks[i].functionEnabled==1 && now>=tasks[i].nextExec){
+			tasks[i].nextExec+=tasks[i].period;
+			tasks[i].taskFunction();
+		}
+	}
+}
+
+//void i2c_scan() {
+//    printf("Scanning I2C...\r\n");
+//    for(uint8_t addr=1; addr<127; addr++) {
+//        if(HAL_I2C_IsDeviceReady(&hi2c2, (addr<<1), 1, 10) == HAL_OK) {
+//            printf("Found: 0x%02X\r\n", addr);
+//        }
+//    }
+//}
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_USART1_UART_Init();
+  MX_I2C2_Init();
+  /* USER CODE BEGIN 2 */
+  printf("-------Start------\r\n");
+
+//  uint32_t now=0, nextToggle=1000, nextUART=500, nextI2C=50;
+
+  HAL_Delay(1000);
+  mpu_init();
+  bmp_init();
+
+  //i2c_scan();
+
+  bmp_read_calib_data(&bmp_calib_data);
+
+  printf("Calibration values of BMP280-> T1=%u, P1=%u, P2=%d.......\r\n", bmp_calib_data.dig_T1, bmp_calib_data.dig_P1, bmp_calib_data.dig_P2);
+
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+	  cooperativeScheduler();
+//	  now=uwTick;
+//
+//	  if(now>=nextToggle){
+//		  nextToggle+=1000;
+//		  toggle();
+//	  }
+//
+//	  if(now>=nextUART){
+//		  nextUART+=500;
+//		  displayCurrentState(&mpu_scaled);
+//	  }
+//
+//	  if(now>nextI2C){
+//		  nextI2C+=50;
+//		  mpu_read(&mpu_raw);
+//		  mpu_scaling(&mpu_raw, &mpu_scaled);
+	  }
+
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C2_Init(void)
+{
+
+  /* USER CODE BEGIN I2C2_Init 0 */
+
+  /* USER CODE END I2C2_Init 0 */
+
+  /* USER CODE BEGIN I2C2_Init 1 */
+
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.ClockSpeed = 100000;
+  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  __HAL_RCC_I2C2_FORCE_RESET();
+  __HAL_RCC_I2C2_RELEASE_RESET();
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C2_Init 2 */
+
+  /* USER CODE END I2C2_Init 2 */
+
+}
+
+/**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin : LED_Pin */
+  GPIO_InitStruct.Pin = LED_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
+}
+
+/* USER CODE BEGIN 4 */
+
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */

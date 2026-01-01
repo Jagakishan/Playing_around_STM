@@ -1,0 +1,10 @@
+21:17:54 **** Build of configuration Debug for project Bluepill_5 ****
+make -j16 all 
+arm-none-eabi-size  Bluepill_5.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13792	    100	   2380	  16272	   3f90	Bluepill_5.elf
+Finished building: default.size.stdout
+ 
+
+21:17:55 Build Finished. 0 errors, 0 warnings. (took 428ms)
+

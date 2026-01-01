@@ -1,0 +1,10 @@
+21:18:02 **** Build of configuration Debug for project Bluepill_usbprint ****
+make -j16 all 
+arm-none-eabi-size  Bluepill_usbprint.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34388	    472	   6448	  41308	   a15c	Bluepill_usbprint.elf
+Finished building: default.size.stdout
+ 
+
+21:18:02 Build Finished. 0 errors, 0 warnings. (took 576ms)
+

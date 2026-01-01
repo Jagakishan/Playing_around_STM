@@ -1,0 +1,17 @@
+21:17:38 **** Build of configuration Debug for project Blackpill_405xx_0 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Blackpill_405xx_0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Blackpill_405xx_0\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blackpill_405xx_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Blackpill_405xx_0.elf
+ 
+arm-none-eabi-size  Blackpill_405xx_0.elf 
+arm-none-eabi-objdump -h -S Blackpill_405xx_0.elf  > "Blackpill_405xx_0.list"
+   text	   data	    bss	    dec	    hex	filename
+  17752	     12	   1956	  19720	   4d08	Blackpill_405xx_0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Blackpill_405xx_0.list
+ 
+
+21:17:41 Build Finished. 0 errors, 0 warnings. (took 2s.759ms)
+

@@ -1,0 +1,122 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f1xx_hal.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
+
+/* USER CODE END ET */
+
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
+#define UART_BUFFER_SIZE 256
+
+/* USER CODE END EC */
+
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
+
+/* USER CODE END EM */
+
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
+
+/* USER CODE BEGIN EFP */
+
+/* USER CODE END EFP */
+
+/* Private defines -----------------------------------------------------------*/
+#define LED_Pin GPIO_PIN_13
+#define LED_GPIO_Port GPIOC
+
+/* USER CODE BEGIN Private defines */
+typedef struct{
+	uint8_t charBuffer[UART_BUFFER_SIZE];
+	volatile uint16_t head, tail; //Volatile because, it will be altered by both ISR and main code.
+}UART_buffer;
+
+extern UART_buffer buf1;
+
+typedef struct{
+	  int16_t accel[3], gyro[3], temperature;
+}mpu_raw_result_struct;
+
+extern mpu_raw_result_struct mpu_raw;
+
+typedef struct{
+	  float accel[3], gyro[3], temperature;
+}mpu_scaled_result_struct;
+
+extern mpu_scaled_result_struct mpu_scaled;
+
+typedef struct {
+    uint16_t dig_T1;
+    int16_t  dig_T2;
+    int16_t  dig_T3;
+    uint16_t dig_P1;
+    int16_t  dig_P2;
+    int16_t  dig_P3;
+    int16_t  dig_P4;
+    int16_t  dig_P5;
+    int16_t  dig_P6;
+    int16_t  dig_P7;
+    int16_t  dig_P8;
+    int16_t  dig_P9;
+} bmp_calib_struct;
+
+extern bmp_calib_struct bmp_calib_data;
+
+typedef struct{
+	uint32_t raw_pressure;
+	uint32_t raw_temp;
+}bmp_raw_struct;
+
+extern bmp_raw_struct bmp_raw;
+
+typedef struct{
+	uint32_t scaled_pressure;
+	int32_t scaled_temp;
+}bmp_scaled_struct;
+
+extern bmp_scaled_struct bmp_scaled;
+
+
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H */

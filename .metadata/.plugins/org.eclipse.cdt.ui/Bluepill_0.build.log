@@ -1,0 +1,17 @@
+21:17:42 **** Build of configuration Debug for project Bluepill_0 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_0.elf
+ 
+arm-none-eabi-size  Bluepill_0.elf 
+arm-none-eabi-objdump -h -S Bluepill_0.elf  > "Bluepill_0.list"
+   text	   data	    bss	    dec	    hex	filename
+   4628	     12	   1572	   6212	   1844	Bluepill_0.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_0.list
+ 
+
+21:17:44 Build Finished. 0 errors, 0 warnings. (took 2s.135ms)
+

@@ -1,0 +1,36 @@
+2025-12-18 02:16:05,917 [INFO] Gpio:277 - dependency for GPIO [RCC, SYS, USART1]
+2025-12-18 02:16:09,905 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x331,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-18 02:16:11,747 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-18 02:16:15,998 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 847987408 Bytes (1073741824)
+2025-12-18 02:16:18,415 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 867910352 Bytes (1073741824)
+2025-12-18 02:16:19,156 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 924835856 Bytes (1073741824)
+2025-12-18 02:16:19,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-12-18 02:16:19,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-12-18 02:16:19,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-12-18 02:16:19,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-12-18 02:16:19,525 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-12-18 02:16:19,530 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.0.202502271554\\db\
+2025-12-18 02:16:19,686 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\license.tmp_save
+2025-12-18 02:16:20,041 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\license.tmp
+2025-12-18 02:16:20,102 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\gpio.tmp_save
+2025-12-18 02:16:20,355 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\gpio.tmp
+2025-12-18 02:16:20,509 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\stm32f1xx_it.c_save
+2025-12-18 02:16:20,999 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\stm32f1xx_it.c
+2025-12-18 02:16:21,013 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\stm32f1xx_it.h_save
+2025-12-18 02:16:21,219 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\stm32f1xx_it.h
+2025-12-18 02:16:21,271 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\stm32f1xx_hal_msp.c_save
+2025-12-18 02:16:21,565 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\stm32f1xx_hal_msp.c
+2025-12-18 02:16:21,581 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\system.tmp_save
+2025-12-18 02:16:21,718 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\MXTmpFiles\system.tmp
+2025-12-18 02:16:21,774 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-12-18 02:16:21,918 [INFO] CodeEngine:343 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\stm32f1xx_hal_conf.h
+2025-12-18 02:16:22,006 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\main.h_save
+2025-12-18 02:16:22,168 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Inc\main.h
+2025-12-18 02:16:22,211 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\main.c_save
+2025-12-18 02:16:22,373 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\Core\Src\main.c
+2025-12-18 02:16:22,878 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 321mS.
+2025-12-18 02:16:22,883 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0-B36
+2025-12-18 02:16:23,030 [INFO] ConfigFileManager:1590 - The Die is : DIE410
+2025-12-18 02:16:24,234 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1351mS.
+2025-12-18 02:16:24,236 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-12-18 02:16:24,240 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.

@@ -1,0 +1,10 @@
+21:17:56 **** Build of configuration Debug for project Bluepill_CAN_loopback ****
+make -j16 all 
+arm-none-eabi-size  Bluepill_CAN_loopback.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15240	    112	   2080	  17432	   4418	Bluepill_CAN_loopback.elf
+Finished building: default.size.stdout
+ 
+
+21:17:57 Build Finished. 0 errors, 0 warnings. (took 499ms)
+

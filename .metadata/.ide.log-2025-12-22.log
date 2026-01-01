@@ -1,0 +1,37 @@
+2025-12-23 00:34:03,106 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-23 00:34:04,312 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-23 00:34:05,696 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-23 00:34:06,641 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-23 00:34:21,446 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 711951624 Bytes (1073741824)
+2025-12-23 00:34:21,982 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 745325136 Bytes (1073741824)
+2025-12-23 00:34:22,491 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-12-23 00:34:22,491 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-12-23 00:34:22,491 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-12-23 00:34:22,492 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-12-23 00:34:22,492 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: CAN
+2025-12-23 00:34:22,492 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-12-23 00:34:22,494 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.0.202502271554\\db\
+2025-12-23 00:34:22,637 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\license.tmp_save
+2025-12-23 00:34:22,873 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\license.tmp
+2025-12-23 00:34:22,903 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\gpio.tmp_save
+2025-12-23 00:34:23,070 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\gpio.tmp
+2025-12-23 00:34:23,156 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\stm32f1xx_it.c_save
+2025-12-23 00:34:23,495 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\stm32f1xx_it.c
+2025-12-23 00:34:23,503 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\stm32f1xx_it.h_save
+2025-12-23 00:34:23,605 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\stm32f1xx_it.h
+2025-12-23 00:34:23,637 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\stm32f1xx_hal_msp.c_save
+2025-12-23 00:34:23,809 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\stm32f1xx_hal_msp.c
+2025-12-23 00:34:23,816 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\system.tmp_save
+2025-12-23 00:34:23,874 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\MXTmpFiles\system.tmp
+2025-12-23 00:34:23,902 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-12-23 00:34:24,003 [INFO] CodeEngine:343 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\stm32f1xx_hal_conf.h
+2025-12-23 00:34:24,062 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\main.h_save
+2025-12-23 00:34:24,153 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Inc\main.h
+2025-12-23 00:34:24,171 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\main.c_save
+2025-12-23 00:34:24,289 [INFO] CodeEngine:287 - Generated code: C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_CAN_loopback\Core\Src\main.c
+2025-12-23 00:34:24,631 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 209mS.
+2025-12-23 00:34:24,635 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0-B36
+2025-12-23 00:34:24,696 [INFO] ConfigFileManager:1590 - The Die is : DIE410
+2025-12-23 00:34:25,566 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 930mS.
+2025-12-23 00:34:25,568 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 2mS.
+2025-12-23 00:34:25,574 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
