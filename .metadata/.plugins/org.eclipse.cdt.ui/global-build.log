@@ -1,1253 +1,517 @@
-23:51:56 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+11:19:12 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-   9672	    104	   2064	  11840	   2e40	Bluepill_BMP280.elf
+  11848	    104	   2024	  13976	   3698	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-00:39:00 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+11:22:40 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:93:1: warning: return type defaults to 'int' [-Wimplicit-int]
-   93 | bmp_init(){
-      | ^~~~~~~~
-../Core/Src/main.c:106:1: warning: return type defaults to 'int' [-Wimplicit-int]
-  106 | bmp_read_calib_data(bmp_calib_struct *bmp){
-      | ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11848	    104	   2024	  13976	   3698	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:24:04 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11848	    104	   2024	  13976	   3698	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:24:24 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11848	    104	   2024	  13976	   3698	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:28:25 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11848	    104	   2024	  13976	   3698	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:33:44 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  15516	    104	   2024	  17644	   44ec	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:39:01 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  15616	    104	   2024	  17744	   4550	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+11:47:51 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  15832	    104	   2024	  17960	   4628	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+14:10:13 **** Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25084	    468	   2028	  27580	   6bbc	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+14:19:10 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25084	    468	   2028	  27580	   6bbc	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+14:42:01 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:174:68: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                    ^~
-../Core/Src/main.c:174:92: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                            ^~
-../Core/Src/main.c:174:116: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                                                    ^~
-../Core/Src/main.c: In function 'bmp_init':
-../Core/Src/main.c:104:1: warning: control reaches end of non-void function [-Wreturn-type]
-  104 | }
-      | ^
-../Core/Src/main.c: In function 'bmp_read_calib_data':
-../Core/Src/main.c:130:1: warning: control reaches end of non-void function [-Wreturn-type]
-  130 | }
-      | ^
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-00:39:58 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:174:72: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d\r\n", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                        ^~
-../Core/Src/main.c:174:96: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d\r\n", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                                ^~
-../Core/Src/main.c:174:120: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d\r\n", bmp_calib_data->dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                                                        ^~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-00:41:30 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:174:95: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d\r\n", bmp_calib_data.dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                               ^~
-../Core/Src/main.c:174:119: error: invalid type argument of '->' (have 'bmp_calib_struct')
-  174 |   printf("Calibration values-> T1=%u, P1=%u, P2=%d\r\n", bmp_calib_data.dig_T1, bmp_calib_data->dig_P1, bmp_calib_data->dig_P2);
-      |                                                                                                                       ^~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-00:41:47 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+../Core/Src/main.c:111:9: warning: variable 'cur_voltage' set but not used [-Wunused-but-set-variable]
+  111 |   float cur_voltage;
+      |         ^~~~~~~~~~~
+../Core/Src/main.c:110:12: warning: unused variable 'cur_ADC' [-Wunused-variable]
+  110 |   uint16_t cur_ADC;
+      |            ^~~~~~~
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  15512	    104	   2088	  17704	   4528	Bluepill_BMP280.elf
+  25388	    468	   2100	  27956	   6d34	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-00:57:44 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_raw_read':
-../Core/Src/main.c:146:75: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
-  146 |         HAL_I2C_Mem_Read(&hi2c2, BMP_ADDRESS, 0xF7, I2C_MEMADD_SIZE_8BIT, &rawValues, 6, 100);
-      |                                                                           ^~~~~~~~~~
-      |                                                                           |
-      |                                                                           uint8_t (*)[6] {aka unsigned char (*)[6]}
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:298,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:568:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
-  568 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                                                                            ~~~~~~~~~^~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:215:76: error: invalid type argument of '->' (have 'bmp_raw_struct')
-  215 |                   printf("Raw pressure: %lu, Raw temperature: %lu", bmp_raw->raw_pressure, bmp_raw->raw_temp);
-      |                                                                            ^~
-../Core/Src/main.c:215:99: error: invalid type argument of '->' (have 'bmp_raw_struct')
-  215 |                   printf("Raw pressure: %lu, Raw temperature: %lu", bmp_raw->raw_pressure, bmp_raw->raw_temp);
-      |                                                                                                   ^~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-00:58:37 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:215:76: error: invalid type argument of '->' (have 'bmp_raw_struct')
-  215 |                   printf("Raw pressure: %lu, Raw temperature: %lu", bmp_raw->raw_pressure, bmp_raw->raw_temp);
-      |                                                                            ^~
-../Core/Src/main.c:215:99: error: invalid type argument of '->' (have 'bmp_raw_struct')
-  215 |                   printf("Raw pressure: %lu, Raw temperature: %lu", bmp_raw->raw_pressure, bmp_raw->raw_temp);
-      |                                                                                                   ^~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-00:58:56 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-   text	   data	    bss	    dec	    hex	filename
-  15732	    104	   2096	  17932	   460c	Bluepill_BMP280.elf
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-00:59:06 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15732	    104	   2096	  17932	   460c	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-01:00:58 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15752	    104	   2096	  17952	   4620	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:01:53 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15756	    104	   2096	  17956	   4624	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:20:18 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15756	    104	   2096	  17956	   4624	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:20:47 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15736	    104	   2096	  17936	   4610	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:25:16 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15736	    104	   2096	  17936	   4610	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:26:45 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_raw_read':
-../Core/Src/main.c:142:17: warning: unused variable 'status' [-Wunused-variable]
-  142 |         uint8_t status;
-      |                 ^~~~~~
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15704	    104	   2096	  17904	   45f0	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:31:04 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_raw_read':
-../Core/Src/main.c:142:17: warning: unused variable 'status' [-Wunused-variable]
-  142 |         uint8_t status;
-      |                 ^~~~~~
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15700	    104	   2096	  17900	   45ec	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:32:10 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15736	    104	   2096	  17936	   4610	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-01:48:41 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  15700	    104	   2096	  17900	   45ec	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-14:03:11 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_scaling':
-../Core/Src/main.c:167:41: error: stray '\342' in program
-  167 |         var1 = ((((bmpRaw->raw_temp>>3) <U+2013> ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                                         ^~~~~~~~
-../Core/Src/main.c:167:36: error: called object is not a function or function pointer
-  167 |         var1 = ((((bmpRaw->raw_temp>>3) – ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                   ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:168:43: error: stray '\342' in program
-  168 |         var2  = (((((bmpRaw->raw_temp>>4) <U+2013> ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                           ^~~~~~~~
-../Core/Src/main.c:168:38: error: called object is not a function or function pointer
-  168 |         var2  = (((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                     ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:169:25: error: stray '\342' in program
-  169 |                         <U+2013> ((int32_t)bmpCalib->dig_T1))) >> 12) *  ((int32_t)bmpCalib->dig_T3)) >> 14;
-      |                         ^~~~~~~~
-../Core/Src/main.c:168:94: error: called object is not a function or function pointer
-  168 |         var2  = (((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                                                             ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:176:17: error: conflicting types for 'var1'; have 'int64_t' {aka 'long long int'}
-  176 |         int64_t var1, var2, p;
-      |                 ^~~~
-../Core/Src/main.c:165:17: note: previous declaration of 'var1' with type 'int32_t' {aka 'long int'}
-  165 |         int32_t var1, var2;
-      |                 ^~~~
-../Core/Src/main.c:176:23: error: conflicting types for 'var2'; have 'int64_t' {aka 'long long int'}
-  176 |         int64_t var1, var2, p;
-      |                       ^~~~
-../Core/Src/main.c:165:23: note: previous declaration of 'var2' with type 'int32_t' {aka 'long int'}
-  165 |         int32_t var1, var2;
-      |                       ^~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:261:31: warning: passing argument 1 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                               ^~~~~~~~
-      |                               |
-      |                               bmp_raw_struct *
-../Core/Src/main.c:163:36: note: expected 'bmp_calib_struct *' but argument is of type 'bmp_raw_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~
-../Core/Src/main.c:261:41: warning: passing argument 2 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                                         ^~~~~~~~~~~
-      |                                         |
-      |                                         bmp_scaled_struct *
-../Core/Src/main.c:163:62: note: expected 'bmp_raw_struct *' but argument is of type 'bmp_scaled_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                                              ~~~~~~~~~~~~~~~~^~~~~~
-../Core/Src/main.c:261:19: error: too few arguments to function 'bmp_scaling'
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                   ^~~~~~~~~~~
-../Core/Src/main.c:163:6: note: declared here
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |      ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-14:04:03 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_scaling':
-../Core/Src/main.c:167:41: error: stray '\342' in program
-  167 |         Var1 = ((((bmpRaw->raw_temp>>3) <U+2013> ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                                         ^~~~~~~~
-../Core/Src/main.c:167:36: error: called object is not a function or function pointer
-  167 |         Var1 = ((((bmpRaw->raw_temp>>3) – ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                   ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:168:43: error: stray '\342' in program
-  168 |         Var2  = (((((bmpRaw->raw_temp>>4) <U+2013> ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                           ^~~~~~~~
-../Core/Src/main.c:168:38: error: called object is not a function or function pointer
-  168 |         Var2  = (((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                     ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:169:25: error: stray '\342' in program
-  169 |                         <U+2013> ((int32_t)bmpCalib->dig_T1))) >> 12) *  ((int32_t)bmpCalib->dig_T3)) >> 14;
-      |                         ^~~~~~~~
-../Core/Src/main.c:168:94: error: called object is not a function or function pointer
-  168 |         Var2  = (((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                                                             ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:261:31: warning: passing argument 1 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                               ^~~~~~~~
-      |                               |
-      |                               bmp_raw_struct *
-../Core/Src/main.c:163:36: note: expected 'bmp_calib_struct *' but argument is of type 'bmp_raw_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~
-../Core/Src/main.c:261:41: warning: passing argument 2 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                                         ^~~~~~~~~~~
-      |                                         |
-      |                                         bmp_scaled_struct *
-../Core/Src/main.c:163:62: note: expected 'bmp_raw_struct *' but argument is of type 'bmp_scaled_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                                              ~~~~~~~~~~~~~~~~^~~~~~
-../Core/Src/main.c:261:19: error: too few arguments to function 'bmp_scaling'
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                   ^~~~~~~~~~~
-../Core/Src/main.c:163:6: note: declared here
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |      ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-14:06:33 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'bmp_scaling':
-../Core/Src/main.c:167:40: error: stray '\342' in program
-  167 |         Var1 =((((bmpRaw->raw_temp>>3) <U+2013> ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                                        ^~~~~~~~
-../Core/Src/main.c:167:35: error: called object is not a function or function pointer
-  167 |         Var1 =((((bmpRaw->raw_temp>>3) – ((int32_t)bmpCalib->dig_T1<<1))) * ((int32_t)bmpCalib->dig_T2)) >> 11;
-      |                  ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:168:42: error: stray '\342' in program
-  168 |         Var2  =(((((bmpRaw->raw_temp>>4) <U+2013> ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                          ^~~~~~~~
-../Core/Src/main.c:168:37: error: called object is not a function or function pointer
-  168 |         Var2  =(((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                    ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:169:25: error: stray '\342' in program
-  169 |                         <U+2013>((int32_t)bmpCalib->dig_T1))) >> 12) *  ((int32_t)bmpCalib->dig_T3)) >> 14;
-      |                         ^~~~~~~~
-../Core/Src/main.c:168:93: error: called object is not a function or function pointer
-  168 |         Var2  =(((((bmpRaw->raw_temp>>4) – ((int32_t)bmpCalib->dig_T1)) * ((bmpRaw->raw_temp>>4)
-      |                                                                            ~~~~~~~~~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:261:31: warning: passing argument 1 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                               ^~~~~~~~
-      |                               |
-      |                               bmp_raw_struct *
-../Core/Src/main.c:163:36: note: expected 'bmp_calib_struct *' but argument is of type 'bmp_raw_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~
-../Core/Src/main.c:261:41: warning: passing argument 2 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                                         ^~~~~~~~~~~
-      |                                         |
-      |                                         bmp_scaled_struct *
-../Core/Src/main.c:163:62: note: expected 'bmp_raw_struct *' but argument is of type 'bmp_scaled_struct *'
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |                                              ~~~~~~~~~~~~~~~~^~~~~~
-../Core/Src/main.c:261:19: error: too few arguments to function 'bmp_scaling'
-  261 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                   ^~~~~~~~~~~
-../Core/Src/main.c:163:6: note: declared here
-  163 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled){
-      |      ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-14:10:52 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+14:42:39 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:272:31: warning: passing argument 1 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  272 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                               ^~~~~~~~
-      |                               |
-      |                               bmp_raw_struct *
-../Core/Src/main.c:165:36: note: expected 'bmp_calib_struct *' but argument is of type 'bmp_raw_struct *'
-  165 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled)
-      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~
-../Core/Src/main.c:272:41: warning: passing argument 2 of 'bmp_scaling' from incompatible pointer type [-Wincompatible-pointer-types]
-  272 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                                         ^~~~~~~~~~~
-      |                                         |
-      |                                         bmp_scaled_struct *
-../Core/Src/main.c:165:62: note: expected 'bmp_raw_struct *' but argument is of type 'bmp_scaled_struct *'
-  165 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled)
-      |                                              ~~~~~~~~~~~~~~~~^~~~~~
-../Core/Src/main.c:272:19: error: too few arguments to function 'bmp_scaling'
-  272 |                   bmp_scaling(&bmp_raw, &bmp_scaled);
-      |                   ^~~~~~~~~~~
-../Core/Src/main.c:165:6: note: declared here
-  165 | void bmp_scaling(bmp_calib_struct *bmpCalib, bmp_raw_struct *bmpRaw, bmp_scaled_struct *bmpScaled)
-      |      ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-14:11:45 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+../Core/Src/main.c:111:9: warning: variable 'cur_voltage' set but not used [-Wunused-but-set-variable]
+  111 |   float cur_voltage;
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18172	    104	   2104	  20380	   4f9c	Bluepill_BMP280.elf
+  25388	    468	   2100	  27956	   6d34	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-14:13:14 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+14:43:18 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:268:56: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int32_t' {aka 'long int'} [-Wformat=]
-  268 |                   printf("Pressure: %lu, Temperature: %d\r\n", bmp_scaled.scaled_pressure, bmp_scaled.scaled_temp);
-      |                                                       ~^                                   ~~~~~~~~~~~~~~~~~~~~~~
-      |                                                        |                                             |
-      |                                                        int                                           int32_t {aka long int}
-      |                                                       %ld
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18228	    104	   2104	  20436	   4fd4	Bluepill_BMP280.elf
+  25436	    468	   2100	  28004	   6d64	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-14:13:35 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+14:48:27 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18228	    104	   2104	  20436	   4fd4	Bluepill_BMP280.elf
+  25436	    468	   2100	  28004	   6d64	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-14:17:36 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+14:52:35 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
+  25436	    468	   2100	  28004	   6d64	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-14:26:26 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+15:15:05 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
+  26044	    468	   2092	  28604	   6fbc	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-20:26:24 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
+15:16:59 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
+  25436	    468	   2100	  28004	   6d64	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_BMP280.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_BMP280.list
+Finished building: Bluepill_Potentiometer.list
  
-20:40:11 **** Build of configuration Debug for project MiniOS_0 ****
+15:34:15 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25436	    468	   2100	  28004	   6d64	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+15:36:45 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25644	    468	   2100	  28212	   6e34	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+15:37:45 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25676	    468	   2100	  28244	   6e54	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+15:46:17 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  26412	    468	   2100	  28980	   7134	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:05:24 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  28380	    468	   2172	  31020	   792c	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:16:07 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  28380	    468	   2172	  31020	   792c	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:23:16 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  29316	    468	   2172	  31956	   7cd4	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:25:32 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  29316	    468	   2172	  31956	   7cd4	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:28:21 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
 arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'displayCurrentState':
-../Core/Src/main.c:277:66: error: 'bmp_raw' is a pointer; did you mean to use '->'?
-  277 |     printf("Raw pressure: %lu, Raw temperature: %lu\r\n", bmp_raw.raw_pressure, bmp_raw.raw_temp);
-      |                                                                  ^
-      |                                                                  ->
-../Core/Src/main.c:277:88: error: 'bmp_raw' is a pointer; did you mean to use '->'?
-  277 |     printf("Raw pressure: %lu, Raw temperature: %lu\r\n", bmp_raw.raw_pressure, bmp_raw.raw_temp);
-      |                                                                                        ^
-      |                                                                                        ->
-../Core/Src/main.c:278:61: error: 'bmp_scaled' is a pointer; did you mean to use '->'?
-  278 |     printf("Pressure: %lu, Temperature: %ld\r\n", bmp_scaled.scaled_pressure, bmp_scaled.scaled_temp);
-      |                                                             ^
-      |                                                             ->
-../Core/Src/main.c:278:89: error: 'bmp_scaled' is a pointer; did you mean to use '->'?
-  278 |     printf("Pressure: %lu, Temperature: %ld\r\n", bmp_scaled.scaled_pressure, bmp_scaled.scaled_temp);
-      |                                                                                         ^
-      |                                                                                         ->
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-20:40:49 **** Incremental Build of configuration Debug for project MiniOS_0 ****
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
+ 
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
+   text	   data	    bss	    dec	    hex	filename
+  29964	    468	   2172	  32604	   7f5c	Bluepill_Potentiometer.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bluepill_Potentiometer.hex
+ 
+Finished building: Bluepill_Potentiometer.list
+ 
+16:35:36 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  30244	    548	   2420	  33212	   81bc	MiniOS_0.elf
+  29980	    468	   2172	  32620	   7f6c	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: MiniOS_0.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: MiniOS_0.list
+Finished building: Bluepill_Potentiometer.list
  
-20:41:35 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-size  MiniOS_0.elf 
-   text	   data	    bss	    dec	    hex	filename
-  30244	    548	   2420	  33212	   81bc	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-20:51:34 **** Incremental Build of configuration Debug for project MiniOS_0 ****
+17:22:46 **** Incremental Build of configuration Debug for project Bluepill_Potentiometer ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30972	    548	   2420	  33940	   8494	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-20:53:19 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30980	    548	   2420	  33948	   849c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-21:09:38 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  18964	    104	   2104	  21172	   52b4	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-21:10:46 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-21:17:38 **** Build of configuration Debug for project Blackpill_405xx_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Blackpill_405xx_0.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Blackpill_405xx_0\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blackpill_405xx_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Blackpill_405xx_0.elf
- 
-arm-none-eabi-size  Blackpill_405xx_0.elf 
-arm-none-eabi-objdump -h -S Blackpill_405xx_0.elf  > "Blackpill_405xx_0.list"
-   text	   data	    bss	    dec	    hex	filename
-  17752	     12	   1956	  19720	   4d08	Blackpill_405xx_0.elf
-Finished building: default.size.stdout
- 
-Finished building: Blackpill_405xx_0.list
- 
-21:17:41 **** Build of configuration Debug for project Blackpill_405xx_1 ****
-make -j16 all 
-arm-none-eabi-size  Blackpill_405xx_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11148	     12	   2156	  13316	   3404	Blackpill_405xx_1.elf
-Finished building: default.size.stdout
- 
-21:17:42 **** Build of configuration Debug for project Bluepill_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/Jagakishan/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_0.elf
- 
-arm-none-eabi-size  Bluepill_0.elf 
-arm-none-eabi-objdump -h -S Bluepill_0.elf  > "Bluepill_0.list"
-   text	   data	    bss	    dec	    hex	filename
-   4628	     12	   1572	   6212	   1844	Bluepill_0.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_0.list
- 
-21:17:44 **** Build of configuration Debug for project Bluepill_1 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_1.elf
- 
-arm-none-eabi-size  Bluepill_1.elf 
-arm-none-eabi-objdump -h -S Bluepill_1.elf  > "Bluepill_1.list"
-   text	   data	    bss	    dec	    hex	filename
-   4908	     12	   1572	   6492	   195c	Bluepill_1.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_1.list
- 
-21:17:46 **** Build of configuration Debug for project Bluepill_1.1 ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_1.1.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7108	     20	   1644	   8772	   2244	Bluepill_1.1.elf
-Finished building: default.size.stdout
- 
-21:17:47 **** Build of configuration Debug for project Bluepill_2 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_2\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_2.elf
- 
-arm-none-eabi-size  Bluepill_2.elf 
-arm-none-eabi-objdump -h -S Bluepill_2.elf  > "Bluepill_2.list"
-   text	   data	    bss	    dec	    hex	filename
-   7012	     12	   1644	   8668	   21dc	Bluepill_2.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_2.list
- 
-21:17:49 **** Build of configuration Debug for project Bluepill_3 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_3.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_3\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_3.elf
- 
-arm-none-eabi-size  Bluepill_3.elf 
-arm-none-eabi-objdump -h -S Bluepill_3.elf  > "Bluepill_3.list"
-   text	   data	    bss	    dec	    hex	filename
-   8660	     12	   1644	  10316	   284c	Bluepill_3.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_3.list
- 
-21:17:52 **** Build of configuration Debug for project Bluepill_4 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_4.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_4\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_4.elf
- 
-arm-none-eabi-size  Bluepill_4.elf 
-arm-none-eabi-objdump -h -S Bluepill_4.elf  > "Bluepill_4.list"
-   text	   data	    bss	    dec	    hex	filename
-  16356	     12	   1916	  18284	   476c	Bluepill_4.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_4.list
- 
-21:17:54 **** Build of configuration Debug for project Bluepill_5 ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_5.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13792	    100	   2380	  16272	   3f90	Bluepill_5.elf
-Finished building: default.size.stdout
- 
-21:17:55 **** Build of configuration Debug for project Bluepill_6 ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_6.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10016	     16	   1744	  11776	   2e00	Bluepill_6.elf
-Finished building: default.size.stdout
- 
-21:17:56 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-   text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-21:17:56 **** Build of configuration Debug for project Bluepill_CAN_loopback ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_CAN_loopback.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15240	    112	   2080	  17432	   4418	Bluepill_CAN_loopback.elf
-Finished building: default.size.stdout
- 
-21:17:57 **** Build of configuration Debug for project Bluepill_PWM ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_PWM.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13948	    104	   2048	  16100	   3ee4	Bluepill_PWM.elf
-Finished building: default.size.stdout
- 
-21:17:58 **** Build of configuration Debug for project Bluepill_flash ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_flash.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34592	    472	   6448	  41512	   a228	Bluepill_flash.elf
-Finished building: default.size.stdout
- 
-21:17:58 **** Build of configuration Debug for project Bluepill_serialprint ****
-make -j16 all 
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
 arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc -o "Bluepill_serialprint.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_serialprint\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_serialprint.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_serialprint.elf
+arm-none-eabi-gcc -o "Bluepill_Potentiometer.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_Potentiometer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_Potentiometer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bluepill_Potentiometer.elf
  
-arm-none-eabi-size  Bluepill_serialprint.elf 
-arm-none-eabi-objdump -h -S Bluepill_serialprint.elf  > "Bluepill_serialprint.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_serialprint.elf  "Bluepill_serialprint.hex"
+arm-none-eabi-size  Bluepill_Potentiometer.elf 
+arm-none-eabi-objdump -h -S Bluepill_Potentiometer.elf  > "Bluepill_Potentiometer.list"
+arm-none-eabi-objcopy  -O ihex Bluepill_Potentiometer.elf  "Bluepill_Potentiometer.hex"
    text	   data	    bss	    dec	    hex	filename
-  10304	    104	   1976	  12384	   3060	Bluepill_serialprint.elf
+  28556	    468	   2172	  31196	   79dc	Bluepill_Potentiometer.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_serialprint.hex
+Finished building: Bluepill_Potentiometer.hex
  
-Finished building: Bluepill_serialprint.list
- 
-21:18:01 **** Build of configuration Debug for project Bluepill_sinePWM ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_sinePWM.elf 
-   text	   data	    bss	    dec	    hex	filename
-  21996	    104	   2176	  24276	   5ed4	Bluepill_sinePWM.elf
-Finished building: default.size.stdout
- 
-21:18:02 **** Build of configuration Debug for project Bluepill_usbprint ****
-make -j16 all 
-arm-none-eabi-size  Bluepill_usbprint.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34388	    472	   6448	  41308	   a15c	Bluepill_usbprint.elf
-Finished building: default.size.stdout
- 
-21:18:02 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30252	    548	   2420	  33220	   81c4	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-21:27:33 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30324	    548	   2420	  33292	   820c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-21:29:14 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-size  MiniOS_0.elf 
-   text	   data	    bss	    dec	    hex	filename
-  30324	    548	   2420	  33292	   820c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-21:58:04 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30324	    548	   2420	  33292	   820c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-21:59:55 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30380	    548	   2420	  33348	   8244	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:05:49 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'mpu_read':
-../Core/Src/main.c:140:86: error: 'rawValues' undeclared (first use in this function); did you mean 'raw_Values'?
-  140 |         HAL_I2C_Mem_Read(&hi2c2, MPU_ADDRESS, MPU_REG_ADDRESS, I2C_MEMADD_SIZE_8BIT, rawValues, 14, 10);
-      |                                                                                      ^~~~~~~~~
-      |                                                                                      raw_Values
-../Core/Src/main.c:140:86: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-22:06:06 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'mpu_read':
-../Core/Src/main.c:146:28: error: 'rawValues' undeclared (first use in this function); did you mean 'raw_Values'?
-  146 |         mpu->temperature= (rawValues[6]<<8) | rawValues[7];
-      |                            ^~~~~~~~~
-      |                            raw_Values
-../Core/Src/main.c:146:28: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-22:06:29 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30380	    548	   2420	  33348	   8244	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:09:40 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30420	    548	   2420	  33388	   826c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:16:44 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30436	    548	   2420	  33404	   827c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:21:27 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30500	    548	   2420	  33468	   82bc	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:22:52 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30460	    548	   2420	  33428	   8294	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:29:30 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30548	    548	   2420	  33516	   82ec	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:33:24 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-22:35:16 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30548	    548	   2420	  33516	   82ec	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:37:46 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30596	    548	   2420	  33564	   831c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:42:06 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:409:21: error: redeclaration of 's' with no linkage
-  409 |   HAL_StatusTypeDef s;
-      |                     ^
-../Core/Src/main.c:407:21: note: previous declaration of 's' with type 'HAL_StatusTypeDef'
-  407 |   HAL_StatusTypeDef s;
-      |                     ^
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
-22:42:20 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30588	    548	   2420	  33556	   8314	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:44:11 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30596	    548	   2420	  33564	   831c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:47:14 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30596	    548	   2420	  33564	   831c	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
-22:52:40 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  18360	    104	   2104	  20568	   5058	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-22:54:29 **** Incremental Build of configuration Debug for project Bluepill_BMP280 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_BMP280.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_BMP280\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_BMP280.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_BMP280.elf
- 
-arm-none-eabi-size  Bluepill_BMP280.elf 
-arm-none-eabi-objdump -h -S Bluepill_BMP280.elf  > "Bluepill_BMP280.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_BMP280.elf  "Bluepill_BMP280.hex"
-   text	   data	    bss	    dec	    hex	filename
-  18232	    104	   2104	  20440	   4fd8	Bluepill_BMP280.elf
-Finished building: default.size.stdout
- 
-Finished building: Bluepill_BMP280.hex
- 
-Finished building: Bluepill_BMP280.list
- 
-23:00:55 **** Incremental Build of configuration Debug for project MiniOS_0 ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
-arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
-   text	   data	    bss	    dec	    hex	filename
-  30460	    548	   2420	  33428	   8294	MiniOS_0.elf
-Finished building: default.size.stdout
- 
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
+Finished building: Bluepill_Potentiometer.list
  
