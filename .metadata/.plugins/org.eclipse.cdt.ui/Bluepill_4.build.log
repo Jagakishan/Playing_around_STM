@@ -1,17 +1,10 @@
-21:17:52 **** Build of configuration Debug for project Bluepill_4 ****
+15:48:21 **** Build of configuration Debug for project Bluepill_4 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Bluepill_4.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_4\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_4.elf
- 
 arm-none-eabi-size  Bluepill_4.elf 
-arm-none-eabi-objdump -h -S Bluepill_4.elf  > "Bluepill_4.list"
    text	   data	    bss	    dec	    hex	filename
   16356	     12	   1916	  18284	   476c	Bluepill_4.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_4.list
- 
 
-21:17:54 Build Finished. 0 errors, 0 warnings. (took 2s.349ms)
+15:48:21 Build Finished. 0 errors, 0 warnings. (took 260ms)
 

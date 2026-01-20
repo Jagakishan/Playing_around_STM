@@ -1,0 +1,10 @@
+15:48:25 **** Build of configuration Debug for project Bluepill_W25Q32 ****
+make -j16 all 
+arm-none-eabi-size  Bluepill_W25Q32.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14448	    104	   2064	  16616	   40e8	Bluepill_W25Q32.elf
+Finished building: default.size.stdout
+ 
+
+15:48:25 Build Finished. 0 errors, 0 warnings. (took 257ms)
+

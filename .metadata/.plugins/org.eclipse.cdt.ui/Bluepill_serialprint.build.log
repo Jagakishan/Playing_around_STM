@@ -1,20 +1,10 @@
-21:17:58 **** Build of configuration Debug for project Bluepill_serialprint ****
+15:48:27 **** Build of configuration Debug for project Bluepill_serialprint ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc -o "Bluepill_serialprint.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\Bluepill_serialprint\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bluepill_serialprint.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Bluepill_serialprint.elf
- 
 arm-none-eabi-size  Bluepill_serialprint.elf 
-arm-none-eabi-objdump -h -S Bluepill_serialprint.elf  > "Bluepill_serialprint.list"
-arm-none-eabi-objcopy  -O ihex Bluepill_serialprint.elf  "Bluepill_serialprint.hex"
    text	   data	    bss	    dec	    hex	filename
   10304	    104	   1976	  12384	   3060	Bluepill_serialprint.elf
 Finished building: default.size.stdout
  
-Finished building: Bluepill_serialprint.hex
- 
-Finished building: Bluepill_serialprint.list
- 
 
-21:18:01 Build Finished. 0 errors, 0 warnings. (took 2s.405ms)
+15:48:27 Build Finished. 0 errors, 0 warnings. (took 199ms)
 

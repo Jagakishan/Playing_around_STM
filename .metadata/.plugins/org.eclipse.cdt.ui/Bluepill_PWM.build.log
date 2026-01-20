@@ -1,4 +1,4 @@
-21:17:57 **** Build of configuration Debug for project Bluepill_PWM ****
+15:48:23 **** Build of configuration Debug for project Bluepill_PWM ****
 make -j16 all 
 arm-none-eabi-size  Bluepill_PWM.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  Bluepill_PWM.elf
 Finished building: default.size.stdout
  
 
-21:17:57 Build Finished. 0 errors, 0 warnings. (took 402ms)
+15:48:23 Build Finished. 0 errors, 0 warnings. (took 257ms)
 

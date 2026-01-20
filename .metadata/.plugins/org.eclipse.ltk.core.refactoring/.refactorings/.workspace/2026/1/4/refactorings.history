@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Bluepill_CAN_Transmiter&apos; to &apos;Bluepill_mcp2551_Transmiter&apos;" description="Rename resource &apos;Bluepill_CAN_Transmiter&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Bluepill_CAN_Transmiter" name="Bluepill_mcp2551_Transmiter" stamp="1768897357659" updateReferences="true"/>
+</session>

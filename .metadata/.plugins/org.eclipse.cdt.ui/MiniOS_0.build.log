@@ -1,20 +1,10 @@
-23:00:55 **** Incremental Build of configuration Debug for project MiniOS_0 ****
+15:48:28 **** Build of configuration Debug for project MiniOS_0 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MiniOS_0.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Jagakishan\STM32CubeIDE\workspace_1.18.0\MiniOS_0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniOS_0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniOS_0.elf
- 
 arm-none-eabi-size  MiniOS_0.elf 
-arm-none-eabi-objdump -h -S MiniOS_0.elf  > "MiniOS_0.list"
-arm-none-eabi-objcopy  -O ihex MiniOS_0.elf  "MiniOS_0.hex"
    text	   data	    bss	    dec	    hex	filename
   30460	    548	   2420	  33428	   8294	MiniOS_0.elf
 Finished building: default.size.stdout
  
-Finished building: MiniOS_0.hex
- 
-Finished building: MiniOS_0.list
- 
 
-23:00:56 Build Finished. 0 errors, 0 warnings. (took 813ms)
+15:48:28 Build Finished. 0 errors, 0 warnings. (took 252ms)
 

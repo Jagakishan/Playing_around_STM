@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="replacehistory">
+		<item value="receivedData"/>
 		<item value="rawValues"/>
 		<item value="displayCurrentState"/>
 		<item value="mpu_scaling"/>
@@ -15,6 +16,7 @@
 		<item value="UART_BUFFER_SIZE"/>
 	</list>
 	<list key="searchhistory">
+		<item value="RxData"/>
 		<item value="buf"/>
 		<item value="transmitCurrentState"/>
 		<item value="i2c_scaling"/>

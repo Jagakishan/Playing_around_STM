@@ -87,21 +87,18 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  uint32_t now=0, lastToggle=0;
+  uint32_t now=0, nextToggle=500;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  //HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	  //HAL_Delay(500);
+	  now=uwTick;
 
-	  now=HAL_GetTick();
-
-	  if(now-lastToggle>=500){
+	  if(now>nextToggle){
 		  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-		  lastToggle=now;
+		  nextToggle+=500;
 	  }
 
 

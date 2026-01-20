@@ -1402,7 +1402,7 @@ int main(void)
  8000fcc:	481d      	ldr	r0, [pc, #116]	@ (8001044 <main+0xb4>)
  8000fce:	f000 fd4b 	bl	8001a68 <HAL_ADC_Start_DMA>
 
-  HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_Base_Start_IT(&htim3);  //Interrupt activated only for debugging purposes, not necessary.
  8000fd2:	481e      	ldr	r0, [pc, #120]	@ (800104c <main+0xbc>)
  8000fd4:	f002 fb68 	bl	80036a8 <HAL_TIM_Base_Start_IT>
 
