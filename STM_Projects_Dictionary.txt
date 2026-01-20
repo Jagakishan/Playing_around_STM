@@ -1,5 +1,2 @@
-Bluepill_0 -> LED Blink that's it
-Bluepill_1 -> External interrupt to change the frequency of LED blinks
-Bluepill_2 -> Timer 4 used to toggle LED every 1 second with 72MHz crystal clock frequency. We handled the interrupt by overwriting the callback function.
-Bluepill_3 -> Timer 4. But instead of handling the callback, we generate the interrupt signal in channel 1 of timer 4. Which is then connected to whatever device that needs that trigger signal. Same frequency from previous project. As a second part of this project we used another function SET_COMPARE of the timers to regulate the pulse width in the code unlike last time where we fixed it in the CubeMX setup.
+
  
