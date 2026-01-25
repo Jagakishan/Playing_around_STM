@@ -1,3 +1,5 @@
+**This Repo is mostly my own reference**
+
 This repo contains little experiments I did with Bluepill(STM32F103C8T6) and some with Blackpill. These are not part of any project, although some may be overlapping as I am working in the same workspace in CubeIDE.
 Each folder demonstrates small topics like timers, GPIO, UART, DMA, I2C, CAN, DAC, etc.. 
 Mostly HAL heavy codes, and some bare-metal.
